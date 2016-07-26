@@ -7,7 +7,7 @@
 #include <intrin.h>
 #endif
 
-#include "argon2.h"
+#include "../include/argon2.h"
 
 static uint64_t rdtsc(void) {
 #ifdef _MSC_VER
