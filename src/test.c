@@ -15,9 +15,15 @@
  * software. If not, they may be obtained at the above URLs.
  */
 
-#include <stdio.h>
-#include <stdint.h>
+#ifdef _MSC_VER
+#include "inttypes.h"
+#include "stdint.h"
+#else
 #include <inttypes.h>
+#include <stdint.h>
+#endif
+
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>

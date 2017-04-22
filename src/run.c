@@ -17,8 +17,14 @@
 
 #define _GNU_SOURCE 1
 
+#ifdef _MSC_VER
+#include "inttypes.h"
+#include "stdint.h"
+#else
 #include <inttypes.h>
 #include <stdint.h>
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

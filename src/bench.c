@@ -15,14 +15,17 @@
  * software. If not, they may be obtained at the above URLs.
  */
 
-#include <stdio.h>
+#ifdef _MSC_VER
+#include <intrin.h>
+#include "stdint.h"
+#else
 #include <stdint.h>
+#endif
+
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#ifdef _MSC_VER
-#include <intrin.h>
-#endif
 
 #include "argon2.h"
 

@@ -15,7 +15,12 @@
  * software. If not, they may be obtained at the above URLs.
  */
 
+#ifdef _MSC_VER
+#include "stdint.h"
+#else
 #include <stdint.h>
+#endif
+
 #include <string.h>
 #include <stdlib.h>
 

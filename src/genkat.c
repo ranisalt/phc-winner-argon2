@@ -15,7 +15,12 @@
  * software. If not, they may be obtained at the above URLs.
  */
 
+#ifdef _MSC_VER
+#include "inttypes.h"
+#else
 #include <inttypes.h>
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

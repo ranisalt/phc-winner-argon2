@@ -19,13 +19,15 @@
 #ifdef _MSC_VER
 #include <windows.h>
 #include <winbase.h> /* For SecureZeroMemory */
+#include "inttypes.h"
+#else
+#include <inttypes.h>
 #endif
 #if defined __STDC_LIB_EXT1__
 #define __STDC_WANT_LIB_EXT1__ 1
 #endif
 #define VC_GE_2005(version) (version >= 1400)
 
-#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
