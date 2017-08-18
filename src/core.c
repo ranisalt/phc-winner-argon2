@@ -61,14 +61,14 @@ void copy_block(block *dst, const block *src) {
     memcpy(dst->v, src->v, sizeof(uint64_t) * ARGON2_QWORDS_IN_BLOCK);
 }
 
-void xor_block(block *dst, const block *src) {
+void xor_block(block *restrict dst, const block *restrict src) {
     int i;
     for (i = 0; i < ARGON2_QWORDS_IN_BLOCK; ++i) {
         dst->v[i] ^= src->v[i];
     }
 }
 
-static void load_block(block *dst, const void *input) {
+static void load_block(block *restrict dst, const void *restrict input) {
     unsigned i;
     for (i = 0; i < ARGON2_QWORDS_IN_BLOCK; ++i) {
         dst->v[i] = load64((const uint8_t *)input + i * sizeof(dst->v[i]));

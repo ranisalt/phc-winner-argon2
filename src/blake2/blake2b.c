@@ -70,7 +70,7 @@ static BLAKE2_INLINE void blake2b_init0(blake2b_state *S) {
     memcpy(S->h, blake2b_IV, sizeof(S->h));
 }
 
-int blake2b_init_param(blake2b_state *S, const blake2b_param *P) {
+int blake2b_init_param(blake2b_state *restrict S, const blake2b_param *restrict P) {
     const unsigned char *p = (const unsigned char *)P;
     unsigned int i;
 
